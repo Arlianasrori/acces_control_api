@@ -1,0 +1,40 @@
+{
+  "name": "accescontrol-and-register",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest -i",
+    "jest-w": "jest --watch"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.7.0",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "node-cache": "^5.1.2",
+    "prisma": "^5.7.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.6",
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.11",
+    "@types/supertest": "^2.0.16",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  }
+}
