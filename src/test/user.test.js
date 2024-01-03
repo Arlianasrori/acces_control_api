@@ -146,8 +146,8 @@ describe("get users/:identify",() => {
         const userTest = await utils.findUser()
         const result = await supertest(app)
             .get("/users/haqi@gmail.com")
-            .set("Authorization",`Bearer ${userTest.token}salah`)
-        expect(result.status).toBe(403)
+            .set("Authorization",`Bearer ${userTest.token}salahbre`)
+        expect(result.status).toBe(401)
     })
     it("should reject if user is not found", async () => {
         const userTest = await utils.findUser()

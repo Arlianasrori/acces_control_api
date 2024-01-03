@@ -2,12 +2,13 @@ import express from 'express'
 import userController from '../controller/userController.js'
 import { AuthMiddlewareAdmin } from '../middleware/authMiddlewareAdmin.js'
 import { refreshTokenMiddleware } from '../middleware/authRefreshTokenMiddleware.js'
+import { accesTokenMiddleware } from '../middleware/authAccesTokenMiddleware.js'
 
 
 
 export const userRouter = express.Router()
 
-userRouter.get("/users/:identify",userController.search)
+userRouter.get("/users/:identify",accesTokenMiddleware,userController.search)
 userRouter.get("/users",AuthMiddlewareAdmin,userController.searchAll)
 userRouter.post("/users/register",userController.register)
 userRouter.post("/users/login",userController.login)
